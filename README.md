@@ -56,10 +56,21 @@ There are 13 columns in the table and, not including the header, 33 rows.
 
 -Part 2
 
-I produced a graph of the virion diameter against genome length to first see the relationship. The relationship appeared to be exponential, but upon log transforming both variables, the relationship became nicely linear. 
+The relationship between the virion volume and genome length is at first exponential, which is suggested by the equation: the genome length has to be put to the power of _a_ to find the virion volume, but upon log transforming both variables, the relationship became nicely linear. 
 
 -Part 3
 
+The exponent and scaling factor can be calculated through use of the natural log: 
+V = _B_L^_a_ can first be transformed to ln(V) = ln(_B_L^_a_), which then becomes ln(V) = ln(_B_) + _a_ ln(L). This now resembles a linear line equation, tying back to the previous part of the question, and allows us to find the exponent and scaling factor through use of a linear model. We can use the lm() function in R to do this. When we specify the relationship as log(Virion.volume..nm.nm.nm.)~log(Genome.length..kb.), the model outputs the intercept and coefficient. If we think of ln(V) = ln(_B_) + _a_ ln(L) in the form of y = b + mx, substituting log(Virion.volume..nm.nm.nm.) as y and log(Genome.length..kb.) as x, it becomes clear that ln(_B_) is the intercept and _a_ is the gradient. Calling the linear model returns the intercept as 7.075 and the gradient as 1.515. 1.515 is our _a_ value, but 7.075 is ln(_B_), so we only need to raise this to _e_ to find that _B_ is approximately 1182. Placing this into our original equation means that the exponential relationship between virion volume and genome length is V = 1182L^1.515
+
+The summary of the linear model shows the P value for the intercept (log_B_) to be 2.28e-10, and the gradient (_a_) to be 6.44e-10. Both of these are definitely significant at a significance level of 0.05, and so there is strong scientific evidence that there is a linear relationships between the natural logs of virion volume and genome length, and thus an exponential relationship between the virion volume and genome length. 
+
+The 95% CI found for the exponent is the range 1.26-1.6, for which 1.515 falls within. The 95% CI for the scaling factor was 1185-3571, and 1182 falls within this too, so I did find the same values as the paper. 
+
+
+-Part 4
+
+The R code to produce this is in my reproducible-research-homework repo. 
 
 
 
