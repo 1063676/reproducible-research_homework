@@ -65,13 +65,34 @@ V = _B_L^_a_ can first be transformed to ln(V) = ln(_B_L^_a_), which then become
 
 The summary of the linear model shows the P value for the intercept (log_B_) to be 2.28e-10, and the gradient (_a_) to be 6.44e-10. Both of these are definitely significant at a significance level of 0.05, and so there is strong scientific evidence that there is a linear relationships between the natural logs of virion volume and genome length, and thus an exponential relationship between the virion volume and genome length. 
 
-The 95% CI found for the exponent is the range 1.26-1.6, for which 1.515 falls within. The 95% CI for the scaling factor was 1185-3571, and 1182 falls within this too, so I did find the same values as the paper. 
+The 95% CI found for the exponent is the range 1.26-1.6, for which 1.515 falls within. The 95% CI for the scaling factor was 1185-3571, but 1182 falls just slightly outside of this, so my result for the exponent does match the paper but my result for scaling factor doesn't. 
 
 
 -Part 4
 
 The R code to produce this is in my reproducible-research-homework repo. 
 
+
+-Part 5
+
+The estimated volume of a 300kb dsDNA virus, using the values in Table 2 of the paper, would be 1182 * 300^1.52 = approximately 6884014 nm3. 
+
+
+Bonus
+
+Whilst reproducibility and replicability are both concerned with repeating experiments to find the same results, generally, reproducibility suggests the use of the same dataset and resources to find the same trend, whereas replicability is more centred around using different data/resources/equipment to find the same trend. Put differently, a reproducible experiment would be one where it is easy to obtain the same results when the same data is input. A replicable experiment would be one where the same trend is found in different data. 
+
+For example, in an experiment where there was a link found between age and lung cancer rates in British men, the experiment would be reproducible if it was tested again using the same equipment, same methods, and same analyses. However, it would be replicable if the experiment was redone in British women, or American men, or another demographic, and the same trend was found. 
+
+Git and GitHub can increase the reproducibility of research by allowing the sharing of files, code, and data. This means other scientists can have access to the same resources used in the original experiment and in the same format, to recreate it as closely as possible. Forking is critical for reproducibility, as it allows the transfer of data without any manual copying across, which could cause formatting errors, corruption, or forgotten data. 
+GitHub increases the replicability of research through the possibility to edit code and files, and through the preservation of past files. This opens up the possibility of editing code multiple times over to change inputs and parameters, without the need to return code to its original state or save multiple copies. 
+
+
+Overall, there is a lot of crossover between reproducibility and replicability. However, to sum each up, I would say that reproducibility is concerned with achieving consistent results, and replicability is concerned with achieving widely applicable results. Both of these are increased by the fact that GitHub allows file sharing, README files/descriptions and forking. 
+
+Git and Github both share limitations that are found across many data sharing/storing programs. A general limitation is the restriction of file sizes and repository sizes. Though this is difficult to overcome technically, it can still cause issues during large research projects, during which repositories may be fragmented, leading to confusion and a higher rate of errors. Another general concern is security: many programs have the potential for security threats, and GitHub is no exception, particularly the free version. Though it tries to mediate this through mandatory strong passwords and branch protection, it is always possible that a software vulnerability may be exploited and sensitive data accessed. This is especially a threat for scientific research. Speaking of which, Git/GitHub are primarily software/coding oriented, and while this forms a crucial part of scientific research, they aren't specialised for this. Programs such as protocols.io exist which are more tailored towards science than towards software, and these may be preferred over a non-specific software website.
+
+Despite the limitations I have discussed, Git and GitHub are very popular among scientists, and for good reason. Though not specialised towards science, there is a lot of crossover between the properties and protocols necessary for proper scientific research, and those required for software development, and reproducibility/replicability are good examples of this. 
 
 
 
