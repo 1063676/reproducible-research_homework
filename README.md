@@ -36,8 +36,29 @@ The most important use of this is in experiments requiring randomly generated nu
 1. Reference: Madhyastha, P. and Jain, R. (2019). On Model Stability as a Function of Random Seed. [online] arXiv.org. doi:https://doi.org/10.48550/arXiv.1909.10447.
 
 
--Part 3
 
+-Part 3/4
+
+![Committed set seed edit](Set_seed_edit.png)
+
+
+All I had to do to make the code reproducible was to set a seed at the beginning. This meant that the same initial number was fed into the pseudorandom generator, and so runif() produced the same numbers and the same paths resulted each time I ran the code. Paths 1 and 2 weren't the same, because the algorithm generated their two values at the same time through different equations (one used sine and the other used cosine), however, every path 1 was the same and every path 2 was the same. 
+
+
+
+Question 5
+----------
+
+-Part 1
+
+There are 13 columns in the table and, not including the header, 33 rows. 
+
+
+-Part 2
+
+I produced a graph of the virion diameter against genome length to first see the relationship. The relationship appeared to be exponential, but upon log transforming both variables, the relationship became nicely linear. 
+
+-Part 3
 
 
 
