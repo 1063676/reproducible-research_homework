@@ -1,5 +1,7 @@
 # Reproducible research: version control and R
 
+Link to my logistic-growth repo, containing the answers to questions 1, 2 and 3: https://github.com/1431293/logistic_growth
+
 
 Question 4
 ----------
