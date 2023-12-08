@@ -1,6 +1,6 @@
 # Reproducible research: version control and R
 
-Link to my logistic-growth repo, containing the answers to questions 1, 2 and 3: https://github.com/1431293/logistic_growth
+Link to my logistic-growth repo, containing the answers to questions 1, 2 and 3: https://github.com/1063676/logistic_growth
 
 
 Question 4
@@ -72,7 +72,7 @@ The 95% CI found for the exponent is the range 1.26-1.6, for which 1.515 falls w
 
 -Part 4
 
-The R code to produce this is in my reproducible-research-homework repo. 
+The R code to produce this is in my reproducible-research-homework repo: https://github.com/1063676/reproducible-research_homework/blob/main/exponential_virion_graph.R
 
 
 -Part 5
